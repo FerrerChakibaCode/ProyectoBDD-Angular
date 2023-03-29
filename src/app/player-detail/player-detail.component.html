@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div *ngIf="player" class="flex flex-col m-5 md:flex-row">
 
-  <div class="p-4 w-full text-xl md:text-2xl lg:text-3xl">
+  <div class="p-4 w-full text-xl md:text-2xl lg:text-xl">
     <div class="flex items-center justify-center w-full md:justify-start md:mb-6">
       <h1 class="text-4xl font-bold md:text-6xl">{{player.playerName}}</h1>
     </div>
@@ -10,5 +10,6 @@
     <h1 class="">Debut en la MLB: {{player.mlbDebutDate}}</h1>
     <h1 class="">Posicion primaria: {{player.primaryPositionName}}</h1>
     <h1 class="">Peso: {{player.weight}} lbs</h1>
+    <button class="mx-auto w-fit mt-8 bg-blue-300 p-2 text-base rounded-md" (click)="goBack()">Go back</button>
   </div>
 </div>

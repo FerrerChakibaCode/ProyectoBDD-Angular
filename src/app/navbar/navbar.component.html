@@ -22,10 +22,6 @@
           <li routerLink=""
             class="inline-block no-underline hover:text-gray-300 text-lg py-2 px-4 lg:-ml-2 transition duration-500 ease-out">
             Peloteros</li>
-          <li
-            class="inline-block no-underline hover:text-gray-300 text-lg py-2 px-4 lg:-ml-2 transition duration-500 ease-out">
-            Buscador</li>
-          <li (click)="prueba()">prueba de si esta logged</li>
         </ul>
       </nav>
     </div>
@@ -38,10 +34,8 @@
       </div>
     </div>
 
-
-
-
-    <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+    <div *ngIf="!isLogged" class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4"
+      id="nav-content">
       <div class="auth flex items-center w-full md:w-full">
         <a routerLink="/login"
           class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-700 hover:text-neutral-100 transition duration-400 ease-out sm:mr-4 px-5 hover:font-bold sm:text-sm mr-1">

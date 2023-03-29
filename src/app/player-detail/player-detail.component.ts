@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { firstValueFrom, of, Subject, switchMap, takeUntil } from 'rxjs';
 import { Player } from '../models/player';
 import { PlayersService } from '../services/players.service';
@@ -15,7 +15,8 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   private subscriptionDestroy$: Subject<boolean> = new Subject<boolean>();
   constructor(
     private route: ActivatedRoute,
-    private playersService: PlayersService
+    private playersService: PlayersService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -42,5 +43,13 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         return of(null);
       })
     ).subscribe();
+  }
+
+  goBack() {
+    try {
+      this.router.navigate([`/main/`]);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

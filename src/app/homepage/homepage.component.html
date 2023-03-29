@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="w-4/5 mx-auto">
-  <div class="pt-16">
+  <div class="pt-16 flex gap-8">
 
     <p-dropdown *ngIf="countries[0]!=null" [options]="countries" [formControl]="selectedCountryFormControl"
       optionLabel="name" optionValue="id" placeholder="Countries" (onChange)="filter()"></p-dropdown>
