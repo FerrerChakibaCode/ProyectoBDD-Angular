@@ -1,0 +1,56 @@
+<nav id="header" class="w-full z-30 py-1 shadow-lg border-b bg-green-500 font-comfortaa text-[14px]  sticky top-0">
+  <div class="w-full flex items-center justify-between mt-0 sm:px-6 py-2 px-1">
+    <div class="group md:hidden block">
+      <button class="outline-none focus:outline-none border px-3 py-1 bg-white flex items-center min-w-32 rounded-2xl">
+        <span class="pr-1 font-semibold flex-1">Menu</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </span>
+      </button>
+      <ul class="bg-white border transform scale-0 group-hover:scale-100 absolute 
+        transition duration-150 ease-in-out origin-top min-w-32">
+        <li class="px-3 py-1 hover:bg-gray-100 hover:font-bold">Peloteros</li>
+        <li class="px-3 py-1 hover:bg-gray-100 hover:font-bold">Buscador</li>
+      </ul>
+    </div>
+    <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1 overflow-y-auto " id="menu">
+      <nav>
+        <ul class="md:flex items-center justify-between text-base text-white font-bold pt-4 md:pt-0">
+          <li routerLink=""
+            class="inline-block no-underline hover:text-gray-300 text-lg py-2 px-4 lg:-ml-2 transition duration-500 ease-out">
+            Peloteros</li>
+          <li
+            class="inline-block no-underline hover:text-gray-300 text-lg py-2 px-4 lg:-ml-2 transition duration-500 ease-out">
+            Buscador</li>
+          <li (click)="prueba()">prueba de si esta logged</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div *ngIf="isLogged" class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4"
+      id="nav-content">
+      <div class="auth flex items-center w-full md:w-full">
+        <button (click)="handleLogout()"
+          class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-700 hover:text-neutral-100 transition duration-400 ease-out mr-4 px-5 hover:font-bold">Logout</button>
+      </div>
+    </div>
+
+
+
+
+    <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+      <div class="auth flex items-center w-full md:w-full">
+        <a routerLink="/login"
+          class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-700 hover:text-neutral-100 transition duration-400 ease-out sm:mr-4 px-5 hover:font-bold sm:text-sm mr-1">
+          Iniciar sesion</a>
+
+        <a routerLink="/register"
+          class="bg-white text-blue-900 p-2 rounded-full hover:bg-blue-700 hover:text-neutral-100 transition duration-400 ease-out px-5 hover:font-bold">
+          Registrarse</a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="w-4/5 mx-auto">
+  <div class="pt-16">
+
+    <p-dropdown *ngIf="countries[0]!=null" [options]="countries" [formControl]="selectedCountryFormControl"
+      optionLabel="name" optionValue="id" placeholder="Countries" (onChange)="filterByCountry()"></p-dropdown>
+  </div>
+  <div class="mx-auto pt-20 flex flex-wrap justify-evenly gap-[50px]">
+    <div *ngFor="let player of players" class="">
+      <div class="w-[300px] h-[300px] shadow-xl rounded-3xl backdrop-blur-xl flex flex-col justify-center align-middle">
+        <div class="mx-auto">
+          <p class="font-bold text-center pb-8 text-2xl">{{player.playerName}}</p>
+          <p>Id: {{player.playerId}}</p>
+          <p>Primary position: {{player.primaryPositionName}}</p>
+          <p>Birth country: {{player.birthCountry}}</p>
+        </div>
+        <button (click)="goDetails(player.playerId)" class="pt-8 text-center text-blue-500">Más información</button>
+
+      </div>
+    </div>
+  </div>
+</div>
