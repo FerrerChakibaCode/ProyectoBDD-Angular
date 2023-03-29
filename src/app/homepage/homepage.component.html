@@ -3,7 +3,10 @@
   <div class="pt-16">
 
     <p-dropdown *ngIf="countries[0]!=null" [options]="countries" [formControl]="selectedCountryFormControl"
-      optionLabel="name" optionValue="id" placeholder="Countries" (onChange)="filterByCountry()"></p-dropdown>
+      optionLabel="name" optionValue="id" placeholder="Countries" (onChange)="filter()"></p-dropdown>
+
+    <p-dropdown *ngIf="positions[0]!=null" [options]="positions" [formControl]="selectedPositionFormControl"
+      optionLabel="name" optionValue="id" placeholder="Position" (onChange)="filter()"></p-dropdown>
   </div>
   <div class="mx-auto pt-20 flex flex-wrap justify-evenly gap-[50px]">
     <div *ngFor="let player of players" class="">
