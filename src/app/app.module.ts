@@ -16,6 +16,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="w-full max-w-lg mx-auto py-8">
+  <h1 class="my-8 text-4xl text-center">Add a player</h1>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="playerId">
+      Player ID
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="playerId" type="text" formControlName="playerId">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="playerName">
+      Player Name
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="playerName" type="text" formControlName="playerName">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="DOB">
+      Date of birth
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="DOB" type="text" formControlName="DOB">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="mlbDebutDate">
+      Debut en la mlb
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="mlbDebutDate" type="text" formControlName="mlbDebutDate">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="birthCity">
+      Ciudad de nacimiento
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="birthCity" type="text" formControlName="birthCity">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="birthStateProvince">
+      Provincia del estado de nacimiento
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="birthStateProvince" type="text" formControlName="birthStateProvince">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="birthCountry">
+      Pais de nacimiento
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="birthCountry" type="text" formControlName="birthCountry">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="heightInches">
+      Altura (inches)
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="heightInches" type="number" formControlName="heightInches">
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="weight">
+      Peso (lbs)
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="weight" type="number" formControlName="weight">
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="primaryPositionCode">
+      Codigo de la posicion primaria
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="primaryPositionCode" type="number" formControlName="primaryPositionCode">
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="primaryPositionName">
+      Nombre de la posicion primaria
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="primaryPositionName" type="text" formControlName="primaryPositionName">
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2" for="playerForTestSetAndFuturePreds">
+      Player for test set and future preds
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="playerForTestSetAndFuturePreds" type="text" formControlName="playerForTestSetAndFuturePreds">
+  </div>
+
+  <input type="submit" value="Enviar" class="btn btn-info mx-auto bg-green-400 p-2 rounded-lg text-white font-semibold">
+</form>

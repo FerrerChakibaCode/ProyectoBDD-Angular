@@ -22,7 +22,6 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getInfoPlayer();
     console.log(this.player);
-
   }
 
   ngOnDestroy(): void {

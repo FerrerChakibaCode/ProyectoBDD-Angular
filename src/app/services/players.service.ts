@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { collection, collectionData, Firestore } from '@angular/fire/firestore';
-import { doc, getDoc, limit, query, where } from 'firebase/firestore';
+import { addDoc, doc, getDoc, limit, query, where } from 'firebase/firestore';
 import { map, Observable } from 'rxjs';
 import { Player } from '../models/player';
 
@@ -25,6 +25,11 @@ export class PlayersService {
     return collectionData(
       query(playersRef, where('playerId', '==', inputId))
     ) as Observable<any>
+  }
+
+  addPlayer(player: Player) {
+    const playersRef = collection(this.firestore, 'players3');
+    return addDoc(playersRef, player);
   }
 
 }
